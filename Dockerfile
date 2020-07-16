@@ -8,7 +8,9 @@ RUN pip install --upgrade pip
 COPY ./requirements /app/requirements
 
 WORKDIR /app
-
+RUN apt-get update
+RUN apt-get install gdal-bin python-gdal python3-gdal -y
+RUN apt-get install libgdal-dev -y
 RUN pip install -r requirements/common.txt
 
 COPY . /app
