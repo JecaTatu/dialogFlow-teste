@@ -57,6 +57,7 @@ THIRD_PARTY_APPS = [
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS +[
     'apps.dialog_flow',
+    'apps.user'
 ]
 
 MIDDLEWARE = [
@@ -144,3 +145,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 SITE_ID = 1 
+
+AUTH_USER_MODEL = "user.User"
